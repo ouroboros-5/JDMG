@@ -1,0 +1,10 @@
+/* -*- coding: utf-8 -*- */
+/*
+ *	Copyright (c) 2020, JDMG: Javascript for Dungeon Master like Game
+ *              ALL RIGHTS RESERVED.
+ *
+ *  CSS:
+ *
+ */
+#dungeon_terrain_inner{font-family:Palatino Linotype, Book Antiqua, Palatino, serif;}
+#overLay{background-color:black;position:absolute;z-index:1000;opacity:0.6;filter:alpha(opacity=60);width:448px;height:272px;display:none;}

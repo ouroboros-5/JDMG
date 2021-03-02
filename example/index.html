@@ -1,0 +1,65 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Dungeon master javascript</title>
+<script type="text/javascript" language="javascript" src="_js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" language="javascript" src="../LibJDMG.min.js"></script>
+<link href="_css/main.css" rel="stylesheet"/>
+<style>
+body {
+    top:0;
+    left:0;
+    right:0;
+    margin:auto;
+    text-align:center;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    font-size: 20px;
+}
+</style>
+<script type="text/javascript">
+var dun;
+$(document).ready(
+    function(){
+        dun = new JDMG_Dungeon('#terrain','./',"anonymous");
+        dun.start({cname:'User',compass:1,light:5,lang:0,debug:1,automap:2,lang:0,map:{type:'builtin',index:2}});
+        //dun.start({cname:'User',compass:1,light:6,lang:0,debug:1,automap:2,lang:0,map:{type:'random',index:0,func:_mapc,func_init:_mapc_init}});
+        dun.enable_kbd();
+    }
+);
+</script>
+	
+<script type="text/javascript">
+function _mapc_init(_dun, map_conf_r){
+    _dun.tower = 1;
+    _dun.start_floor = 1;
+    _dun.floor = _dun.start_floor;
+    _dun.out_floor = 0;   //exit
+    _dun.event_floor = 5; //goal
+    _dun.total_floors = (_dun.event_floor - _dun.out_floor -1);
+}
+function _mapc(_dun, map_conf_r){
+    if( _dun.floor > 1 ){
+        map_conf_r.width  = 13;
+        map_conf_r.height = 13;
+    }else if( _dun.floor > 2 ){
+        map_conf_r.width  = 31;
+        map_conf_r.height = 31;
+    }else{
+        map_conf_r.width  = 17;
+        map_conf_r.height = 17;
+    }
+    return "";
+}
+</script>
+</head>
+
+<body style='background:#000;'>
+<div style='width:800px;margin:auto;'>
+  <div id='terrain'></div>
+</div>  
+</body>
+
+</html>
