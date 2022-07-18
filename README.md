@@ -10,7 +10,7 @@ see example for details.
  example/_css:  css files
  example/_js:   js files
  example/_img:  image files for dungeon screen
- example/_Level1GFX: image files for UI
+ example/_Level1GFX: image files for UI (DMJ)
  example/_MainGFX:   image files for UI (additional)
 
 
