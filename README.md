@@ -5,7 +5,6 @@ Javascript for Dungeon Master like Game
 This source code is based on DMJ created by Joe Shaw.
   (https://www.thedevteam.co.uk/Knowledge-Base/DungeonMasterJavascript)
 
-
 see example for details.
  example/_css:  css files
  example/_js:   js files
