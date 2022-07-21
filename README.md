@@ -7,6 +7,7 @@ This source code is based on DMJ created by Joe Shaw.
 
 
 see example for details.
+ example/index.html  example root
  example/_css:  css files
  example/_js:   js files
  example/_img:  image files for dungeon screen
